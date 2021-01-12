@@ -23,6 +23,7 @@ enum class ErrorCodes(
     AUTHORIZATION_FAILED(ErrorTypes.Unauthorized),
 
     AUTH_DONT_HAVE_PERMISSIONS(ErrorTypes.Forbidden),
+    BAD_REQUEST(ErrorTypes.Forbidden),
 
     MUSIC_SERVICE_EXC(ErrorTypes.NimuscMusicServices),
     MUSIC_SERVICE_AUTH(ErrorTypes.NimuscMusicServices),
@@ -31,7 +32,8 @@ enum class ErrorCodes(
     NIMUSC_LINK_CONVERTING_BROKEN_LINK(ErrorTypes.NimuscServer),
     NIMUSC_LINK_CONVERTING_SONGS_NOT_FOUND(ErrorTypes.NimuscServer),
 
-    ROOM_NOT_FOUND(ErrorTypes.Internal),
+    ROOM_NOT_FOUND(ErrorTypes.Forbidden),
+    MAX_ROOMS_OWNS(ErrorTypes.Forbidden)
 ;
 
     companion object

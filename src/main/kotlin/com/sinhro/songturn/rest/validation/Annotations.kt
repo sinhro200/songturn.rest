@@ -29,3 +29,11 @@ public annotation class MinMaxValue(val minValue: Int,val maxValue: Int)
 @Target(AnnotationTarget.FIELD,AnnotationTarget.PROPERTY)
 public annotation class NotNull
 
+@Retention(AnnotationRetention.RUNTIME)
+@Target(AnnotationTarget.FIELD,AnnotationTarget.PROPERTY)
+public annotation class Contains(val chars : String)
+
+@Retention(AnnotationRetention.RUNTIME)
+@Target(AnnotationTarget.FIELD,AnnotationTarget.PROPERTY)
+public annotation class NotContains(val chars : String)
+
