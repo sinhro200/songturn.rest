@@ -33,7 +33,9 @@ enum class ErrorCodes(
     NIMUSC_LINK_CONVERTING_SONGS_NOT_FOUND(ErrorTypes.NimuscServer),
 
     ROOM_NOT_FOUND(ErrorTypes.Forbidden),
-    MAX_ROOMS_OWNS(ErrorTypes.Forbidden)
+    MAX_ROOMS_OWNS(ErrorTypes.Forbidden),
+    PLAYLIST_ALREADY_HAS_LISTENER(ErrorTypes.Forbidden),
+    PLAYLIST_NOT_FOUND(ErrorTypes.Forbidden),
 ;
 
     companion object
