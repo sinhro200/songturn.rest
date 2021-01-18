@@ -8,27 +8,24 @@ import com.sinhro.songturn.rest.validation.NotNull
 
 public class RegisterReqData(
         @field:[MinMaxLength(5,50) NotNull NotContains("@.")]
-        var login: String? = null,
+        val login: String,
 
         @field:[MinMaxLength(5,50) NotNull]
-        var password: String? = null,
+        val password: String,
 
         @field:[MinMaxLength(5,50) NotNull]
-        var nickname: String? = null,
+        val nickname: String,
 
         @field:MinMaxLength(2,50)
-        @JsonProperty("first_name")
-        var firstName: String? = null,
+        val firstName: String,
 
         @field:MinMaxLength(2,50)
-        @JsonProperty("last_name")
-        var lastName: String? = null,
+        val lastName: String,
 
         @field:[MinMaxLength(1,90) Contains("@.")]
-        var email: String? = null
+        val email: String
 )
 
 public class RegisterRespBody(
-        @JsonProperty("success_message")
-        var successRegister_message: String? = null
+        val message: String
 )

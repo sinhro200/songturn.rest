@@ -5,10 +5,27 @@ import com.sinhro.songturn.rest.model.PlaylistInfo
 import com.sinhro.songturn.rest.model.SongInfo
 
 class GetPlaylistsReqData(
-        @JsonProperty("room_token")
-        var roomToken: String? = null
+        val roomToken: String = ""
 )
 
 class GetPlaylistsRespBody(
-        var playlists: List<PlaylistInfo>? = null
+        val playlists: List<PlaylistInfo>
+)
+
+class ListenPlaylistReqData(
+        val roomToken: String = "",
+        val playlistTitle: String = ""
+)
+
+class ListenPlaylistRespBody(
+        val playlist: PlaylistInfo
+)
+
+class StopListenPlaylistReqData(
+        val roomToken: String = "",
+        val playlistTitle: String = ""
+)
+
+class StopListenPlaylistRespBody(
+        val playlist: PlaylistInfo
 )

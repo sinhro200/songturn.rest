@@ -5,7 +5,8 @@ class Validator {
     fun validate(obj: Any): ValidatorResult {
         val map = mutableMapOf<String, List<ValidationResult>>()
         for (f in obj::class.java.declaredFields)
-            if (f.canAccess(obj) || f.trySetAccessible()) {
+            if (f.name != "Companion" &&
+                    f.canAccess(obj) || f.trySetAccessible()) {
                 val validatorResults = validateValue(f.get(obj), f.annotations)
                 map.put(f.name, validatorResults)
             }
