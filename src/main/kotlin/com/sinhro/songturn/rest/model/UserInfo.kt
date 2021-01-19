@@ -28,17 +28,18 @@ class RegisterUserInfo(
 }
 
 open class FullUserInfo(
-        val id: Int = 0,
+        id: Int = 0,
         val login: String = "",
         val email: String = "",
         firstName: String = "",
         lastName: String = "",
         nickname: String = ""
-) : PublicUserInfo(firstName, lastName, nickname) {
+) : PublicUserInfo(id, firstName, lastName, nickname) {
     companion object
 }
 
 open class PublicUserInfo(
+        val id: Int = 0,
         val firstName: String = "",
         val lastName: String = "",
         val nickname: String = ""

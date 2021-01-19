@@ -13,11 +13,11 @@ class GetSongsRespBody(
 
 class OrderSongReqData(
         val roomToken: String = "",
+        val playlistTitle: String = "",
         val songLink: String = "",
         val musicServiceAuthInfo: String = "",
-        val playlistTitle: String = ""
 )
 
 class OrderSongRespBody(
-
+        val songInfo: SongInfo
 )

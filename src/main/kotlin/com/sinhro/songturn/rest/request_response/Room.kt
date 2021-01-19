@@ -1,15 +1,14 @@
 package com.sinhro.songturn.rest.request_response
 
-import com.sinhro.songturn.rest.model.PublicUserInfo
-import com.sinhro.songturn.rest.model.RoomActionInfo
-import com.sinhro.songturn.rest.model.RoomInfo
+import com.sinhro.songturn.rest.model.*
 import com.sinhro.songturn.rest.validation.MinMaxLength
 import com.sinhro.songturn.rest.validation.NotNull
 
 //### Create Room
 class CreateRoomReqData(
         @field:[MinMaxLength(5, 50) NotNull]
-        val title: String = ""
+        val title: String = "",
+        val roomSettings: RoomSettings? = null
 )
 
 class CreateRoomRespBody(
@@ -34,7 +33,7 @@ class LeaveRoomRespBody(
 
 )
 
-//### Leave Room
+//### What should update
 class WhatShouldUpdateReqData(
         val roomToken: String = ""
 )
@@ -50,6 +49,20 @@ class RemoveRoomReqData(
 
 class RemoveRoomRespBody(
         val countRemovedRooms: Int
+)
+
+//### Room Info
+class RoomInfoReqData(
+        val roomToken: String = ""
+)
+
+//### Full Room Info
+
+class FullRoomInfoRespBody(
+        val roomInfo: RoomInfo,
+        val usersInRoom: List<PublicUserInfo>,
+        val playlists: List<PlaylistInfo>,
+        val playlistSongs: Map<Int, List<SongInfo>>
 )
 
 //### Users in room

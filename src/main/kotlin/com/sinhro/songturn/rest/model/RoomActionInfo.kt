@@ -1,17 +1,16 @@
 package com.sinhro.songturn.rest.model
 
 class RoomActionInfo(
-        val roomActionType: RoomActionType
+        val needUpdate: RoomActionType
 )
-
 
 enum class RoomActionType(
         val code: Int
 ) {
-    PLAYLIST_SONGS_UPDATED(1),
-    PLAYLIST_INFO_UPDATED(2),
-    ROOM_INFO_UPDATED(3),
-    ROOM_USERS_UPDATED(4),
+    PLAYLIST_SONGS(1),
+    PLAYLIST_INFO(2),
+    ROOM_INFO(3),
+    ROOM_USERS(4),
 
     ;
 
