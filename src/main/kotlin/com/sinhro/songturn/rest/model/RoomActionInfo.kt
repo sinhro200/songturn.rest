@@ -9,8 +9,9 @@ enum class RoomActionType(
 ) {
     PLAYLIST_SONGS(1),
     PLAYLIST_INFO(2),
-    ROOM_INFO(3),
-    ROOM_USERS(4),
+    PLAYLIST_CURRENT_PLAYING_SONG(3),
+    ROOM_INFO(101),
+    ROOM_USERS(102),
 
     ;
 
