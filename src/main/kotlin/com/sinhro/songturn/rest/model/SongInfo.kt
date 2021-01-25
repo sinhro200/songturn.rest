@@ -12,5 +12,8 @@ class SongInfo(
         val expiresAt: LocalDateTime? = null,
         val userId: Int? = null
 ) {
+    override fun toString(): String {
+        return "[$id, $title, $artist, $durationSeconds, $link, $expiresAt, $userId]"
+    }
     companion object
 }

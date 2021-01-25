@@ -35,6 +35,9 @@ open class FullUserInfo(
         lastName: String = "",
         nickname: String = ""
 ) : PublicUserInfo(id, firstName, lastName, nickname) {
+    override fun toString(): String {
+        return "$id, $login, $email, $firstName, $lastName, $nickname"
+    }
     companion object
 }
 

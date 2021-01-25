@@ -1,11 +1,9 @@
 package com.sinhro.songturn.rest.core
 
-import com.fasterxml.jackson.annotation.JsonProperty
 import com.sinhro.songturn.rest.ErrorCodes
 
 open class CommonResponse<T : Any>(
-        @JsonProperty("body")
-        var responseBody: T? = null,
+        var body: T? = null,
         var error: CommonError? = null
 ){
     public companion object{
@@ -28,7 +26,7 @@ open class CommonResponse<T : Any>(
                 responseBody:T
         ): CommonResponse<T> {
             val cr = CommonResponse(responseBody)
-            cr.responseBody = responseBody
+            cr.body = responseBody
             return cr
         }
     }

@@ -8,7 +8,7 @@ class GetPlaylistsReqData(
 )
 
 class GetPlaylistsRespBody(
-        val playlists: List<PlaylistInfo>
+        val playlists: List<PlaylistInfo> = listOf<PlaylistInfo>()
 )
 
 class ListenPlaylistReqData(

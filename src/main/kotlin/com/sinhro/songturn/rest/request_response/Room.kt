@@ -12,7 +12,7 @@ class CreateRoomReqData(
 )
 
 class CreateRoomRespBody(
-        val roomInfo: RoomInfo
+        val roomInfo: RoomInfo = RoomInfo()
 )
 
 //### Enter Room

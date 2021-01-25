@@ -8,7 +8,7 @@ class GetSongsReqData(
 )
 
 class GetSongsRespBody(
-        val songs: List<SongInfo>
+        val songs: List<SongInfo> = listOf()
 )
 
 class OrderSongReqData(
@@ -19,5 +19,17 @@ class OrderSongReqData(
 )
 
 class OrderSongRespBody(
-        val songInfo: SongInfo
+        val songInfo: SongInfo = SongInfo()
+)
+
+//### Vote for song
+class VoteForSongReqData(
+        val roomToken: String = "",
+        val playlistTitle: String = "",
+        val songId: Int = 0,
+        val action: Int = 0
+)
+
+class VoteForSongRespBody(
+        val songInfo: SongInfo = SongInfo()
 )

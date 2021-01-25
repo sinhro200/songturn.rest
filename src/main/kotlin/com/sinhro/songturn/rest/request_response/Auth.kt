@@ -9,6 +9,10 @@ class AuthReqData(
 )
 
 class AuthRespBody(
-        val userInfo: FullUserInfo,
-        val accessToken: String
-)
+        val userInfo: FullUserInfo = FullUserInfo(),
+        val accessToken: String = ""
+){
+    override fun toString(): String {
+        return "$userInfo, $accessToken"
+    }
+}
