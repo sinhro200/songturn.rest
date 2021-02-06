@@ -1,16 +1,22 @@
 package com.sinhro.songturn.rest.request_response
 
-import com.fasterxml.jackson.annotation.JsonProperty
+import com.sinhro.songturn.rest.model.FullUserInfo
+import com.sinhro.songturn.rest.model.RegisterDemoUserInfo
 import com.sinhro.songturn.rest.model.RegisterUserInfo
-import com.sinhro.songturn.rest.validation.Contains
-import com.sinhro.songturn.rest.validation.MinMaxLength
-import com.sinhro.songturn.rest.validation.NotContains
-import com.sinhro.songturn.rest.validation.NotNull
 
 public class RegisterReqData(
         val userInfo: RegisterUserInfo = RegisterUserInfo()
 )
 
 public class RegisterRespBody(
-        val message: String
+        val mustConfirmByMail: Boolean = true,
+        val message: String = ""
+)
+
+public class RegisterDemoReqData(
+        val userInfo: RegisterDemoUserInfo = RegisterDemoUserInfo()
+)
+
+public class RegisterDemoRespBody(
+        val accessToken: String = ""
 )

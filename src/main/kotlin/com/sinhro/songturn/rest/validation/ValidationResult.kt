@@ -15,4 +15,5 @@ public enum class ValidationResultType {
     NotNullError,
     MustContainsError,
     MustNotContainsError,
+    MatchesError
 }

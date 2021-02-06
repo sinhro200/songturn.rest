@@ -1,12 +1,14 @@
 package com.sinhro.songturn.rest.request_response
 
 import com.sinhro.songturn.rest.model.*
+import com.sinhro.songturn.rest.validation.MAX_LENGTH_ROOM_TITLE
+import com.sinhro.songturn.rest.validation.MIN_LENGTH_ROOM_TITLE
 import com.sinhro.songturn.rest.validation.MinMaxLength
 import com.sinhro.songturn.rest.validation.NotNull
 
 //### Create Room
 class CreateRoomReqData(
-        @field:[MinMaxLength(5, 50) NotNull]
+        @field:[MinMaxLength(MIN_LENGTH_ROOM_TITLE, MAX_LENGTH_ROOM_TITLE) NotNull]
         val title: String = "",
         val roomSettings: RoomSettings? = null
 )
