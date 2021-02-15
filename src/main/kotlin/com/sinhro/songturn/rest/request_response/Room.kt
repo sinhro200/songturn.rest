@@ -64,7 +64,7 @@ class FullRoomInfoRespBody(
         val roomInfo: RoomInfo,
         val usersInRoom: List<PublicUserInfo>,
         val playlists: List<PlaylistInfo>,
-        val playlistSongs: Map<Int, List<SongInfo>>
+        val playlistSongs: Map<Int, PlaylistSongs>
 )
 
 //### Users in room

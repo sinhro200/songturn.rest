@@ -1,6 +1,6 @@
 package com.sinhro.songturn.rest.model
 
-import java.time.LocalDateTime
+import java.util.*
 
 class SongInfo(
         val id : Int = 0,
@@ -9,7 +9,7 @@ class SongInfo(
         val durationSeconds: Int = 0,
         val link: String? = null,
         //через сколько, а не когда
-        val expiresAt: LocalDateTime? = null,
+        val expiresAt: Date? = null,
         val userId: Int? = null
 ) {
     override fun toString(): String {

@@ -36,6 +36,7 @@ enum class ErrorCodes(
     MAX_ROOMS_OWNS(ErrorTypes.Forbidden),
     PLAYLIST_ALREADY_HAS_LISTENER(ErrorTypes.Forbidden),
     PLAYLIST_NOT_FOUND(ErrorTypes.Forbidden),
+    USER_NOT_IN_ROOM(ErrorTypes.Forbidden)
 ;
 
     companion object

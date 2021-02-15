@@ -1,14 +1,15 @@
 package com.sinhro.songturn.rest.request_response
 
+import com.sinhro.songturn.rest.model.PlaylistSongs
 import com.sinhro.songturn.rest.model.SongInfo
 
-class GetSongsReqData(
+class PlaylistSongsReqData(
         val roomToken: String = "",
         val playlistTitle: String = "",
 )
 
-class GetSongsRespBody(
-        val songs: List<SongInfo> = listOf()
+class PlaylistSongsRespBody(
+        val playlistSongs: PlaylistSongs = PlaylistSongs()
 )
 
 class OrderSongReqData(
