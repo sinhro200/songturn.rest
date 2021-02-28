@@ -29,3 +29,11 @@ class PlaylistSongs(
 ) {
     companion object
 }
+
+class PlaylistSongsVoted(
+        val songsNotInQueue: List<SongInfoVoted> = listOf(),
+        val currentSong: SongInfoVoted? = null,
+        val songsInQueue: List<SongInfoVoted> = listOf(),
+) {
+    companion object
+}

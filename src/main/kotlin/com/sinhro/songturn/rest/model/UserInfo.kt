@@ -22,6 +22,13 @@ class RegisterUserInfo(
         val rawPassword: String = ""
 ) {
     companion object
+
+    override
+
+    override fun toString(): String {
+        return "RegisterUserInfo(login='$login', email='$email', firstName='$firstName', lastName='$lastName', nickname='$nickname', rawPassword='$rawPassword')"
+    }
+
 }
 
 class RegisterDemoUserInfo(

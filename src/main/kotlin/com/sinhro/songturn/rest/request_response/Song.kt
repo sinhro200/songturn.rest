@@ -1,6 +1,7 @@
 package com.sinhro.songturn.rest.request_response
 
 import com.sinhro.songturn.rest.model.PlaylistSongs
+import com.sinhro.songturn.rest.model.PlaylistSongsVoted
 import com.sinhro.songturn.rest.model.SongInfo
 
 class PlaylistSongsReqData(
@@ -10,6 +11,10 @@ class PlaylistSongsReqData(
 
 class PlaylistSongsRespBody(
         val playlistSongs: PlaylistSongs = PlaylistSongs()
+)
+
+class PlaylistSongsVotedRespBody(
+        val playlistSongsVoted: PlaylistSongsVoted = PlaylistSongsVoted()
 )
 
 class OrderSongReqData(
