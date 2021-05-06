@@ -7,7 +7,7 @@ package com.sinhro.songturn.rest.validation
 
 
 val PATTERN_LOGIN = """[a-zA-Z0-9_\-\+\.]*"""
-const val MIN_LENGTH_LOGIN = 5
+const val MIN_LENGTH_LOGIN = 2
 const val MAX_LENGTH_LOGIN = 50
 
 val PATTERN_PASSWORD = """[a-zA-Z0-9_\-\+\.]*"""
@@ -15,7 +15,7 @@ const val MIN_LENGTH_PASSWORD = 5
 const val MAX_LENGTH_PASSWORD = 50
 
 val PATTERN_NICKNAME = """[a-zA-Z0-9_\-\+\.]*"""
-const val MIN_LENGTH_NICKNAME = 5
+const val MIN_LENGTH_NICKNAME = 2
 const val MAX_LENGTH_NICKNAME = 50
 
 /**

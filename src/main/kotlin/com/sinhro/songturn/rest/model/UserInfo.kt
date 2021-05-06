@@ -21,9 +21,7 @@ class RegisterUserInfo(
         @field:[MinMaxLength(MIN_LENGTH_PASSWORD, MAX_LENGTH_PASSWORD)]
         val rawPassword: String = ""
 ) {
-    companion object
-
-    override
+    companion object{}
 
     override fun toString(): String {
         return "RegisterUserInfo(login='$login', email='$email', firstName='$firstName', lastName='$lastName', nickname='$nickname', rawPassword='$rawPassword')"
